@@ -16,5 +16,8 @@ migratedown:
 sqlc-generate:
 	docker run --rm -v C:\workspace\simple-bank:/src -w /src kjconroy/sqlc:1.4.0 generate
 
+test:
+	go test -v -cover ./...
+
 .PHONY: pg-setup createdb dropdb migrateup migratedown sqlc
 
